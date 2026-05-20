@@ -15,7 +15,7 @@ sbatch create_container.sh
     unzip images.zip
     ```
 
-3. Run the following script to convert the data to webdataset format:
+3. Run the following script to convert the data to webdataset format (MODIFY THE DATA PATH INSIDE `convert_llava_pretrain_to_wds.py`):
 
     ```
     cd <megatron-lm dir>
