@@ -13,6 +13,40 @@
 #SBATCH --cpus-per-task=32
 #SBATCH --gres=gpu:4
 
+
+
+
+
+
+
+
+
+##########################################
+CONTAINER=/leonardo_scratch/large/userinternal/rscheda0/ELLIOT/megatron/nemo_2502.sif
+OUTPUT_BASE=/leonardo_scratch/large/userinternal/rscheda0/train_megatron_qwen2_5_vl_7b
+TENSORBOARD_DIR=${OUTPUT_BASE}/tensorboard
+CHECKPOINT_DIR=${OUTPUT_BASE}/checkpoints
+DATA_BASE_DIR=/leonardo_scratch/large/userinternal/rscheda0/
+DATA_PATH=/data/FlagScale/LLaVA-Pretrain/wds/wds
+TOKENIZER_PATH=/leonardo_scratch/large/userinternal/rscheda0/FlagScale/Qwen/Qwen2.5-VL-7B-Instruct
+LOGS_DIR=${OUTPUT_BASE}/logs
+mkdir -p ${TENSORBOARD_DIR} ${CHECKPOINT_DIR} ${LOGS_DIR}
+
+# Parallelism
+TP=4
+PP=4
+CP=1
+
+# Sequence lengths
+SEQ_LEN=256          # vision token sequence length (per image with internvit + pixel-shuffle)
+DECODER_SEQ_LEN=2048 # language model context length (must be > max_num_tiles+1 * tokens_per_tile = 13*256=3328)
+MAX_POS_EMBED=128000
+
+# Batch sizes
+MBZ=1
+GBZ=1
+NW=1
+###########################################
 module load gcc
 module load cuda/12.6
 
@@ -63,44 +97,8 @@ export WANDB_MODE=offline
 
 MASTER_PORT=9251
 
-CONTAINER=/leonardo_scratch/large/userinternal/rscheda0/ELLIOT/megatron/nemo_2502.sif
-#OVERLAY_PATH=/leonardo_scratch/large/userinternal/rscheda0/prova_flagscale/myover2.img
 
 
-
-# Output directories
-OUTPUT_BASE=/leonardo_scratch/large/userinternal/rscheda0/train_megatron_qwen2_5_vl_7b
-TENSORBOARD_DIR=${OUTPUT_BASE}/tensorboard
-CHECKPOINT_DIR=${OUTPUT_BASE}/checkpoints
-LOGS_DIR=${OUTPUT_BASE}/logs
-mkdir -p ${TENSORBOARD_DIR} ${CHECKPOINT_DIR} ${LOGS_DIR}
-
-# Data: energon-format dataset YAML
-# NOTE: Megatron-LM uses the energon dataloader. Create a dataset.yaml in energon
-# format pointing to your wds shards, or set DATA_PATH to an existing energon dataset.
-# See: /opt/megatron-lm/examples/multimodal/pretrain_dataset.yaml for the template.
-# The LLaVA-Pretrain host dir is bound to /data/LLaVA-Pretrain inside the container.
-
-DATA_PATH=/data/FlagScale/LLaVA-Pretrain/wds/wds
-#DATA_PATH=/data/synth-data-bench-training/data/vqa
-
-# Tokenizer and model paths
-TOKENIZER_PATH=/leonardo_scratch/large/userinternal/rscheda0/FlagScale/Qwen/Qwen2.5-VL-7B-Instruct
-
-# Parallelism
-TP=4
-PP=4
-CP=1
-
-# Sequence lengths
-SEQ_LEN=256          # vision token sequence length (per image with internvit + pixel-shuffle)
-DECODER_SEQ_LEN=2048 # language model context length (must be > max_num_tiles+1 * tokens_per_tile = 13*256=3328)
-MAX_POS_EMBED=128000
-
-# Batch sizes
-MBZ=1
-GBZ=1
-NW=1
 
 # === Distributed args ===
 export DISTRIBUTED_ARGS="--rdzv_id=$RANDOM \
@@ -201,7 +199,7 @@ export LOGGING_ARGS="\
     --wandb-exp-name train_megatron_qwen2_5_vl_7b"
 
 # === Bind mounts ===
-BINDS="$CUDA_HOME,${OUTPUT_BASE}:${OUTPUT_BASE},/leonardo_scratch/large/userinternal/rscheda0/:/data/,${TOKENIZER_PATH}:${TOKENIZER_PATH}"
+BINDS="$CUDA_HOME,${OUTPUT_BASE}:${OUTPUT_BASE},${DATA_BASE_DIR}:/data/,${TOKENIZER_PATH}:${TOKENIZER_PATH}"
 
 # === Launch ===
 srun -l singularity exec --nv \
