@@ -43,10 +43,10 @@ sbatch create_container.sh
     ```
 
 ## Configuration
-Edit `train_qwen2_5-vl.sh` scripts with the paths of the container, data and output folders
+Edit `train_qwen2_5-vl_llava.sh` scripts with the paths of the container, data and output folders
 
 ## Training
 launch qwenvl training:
  ```
- sbatch train_qwen2_5-vl.sh
+ sbatch train_qwen2_5-vl_llava.sh
  ```
