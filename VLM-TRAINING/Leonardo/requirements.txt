@@ -1,0 +1,10 @@
+torchvision==0.25.0
+torchao
+transformers==5.3.0
+datasets
+wandb
+tyro
+megatron-energon
+flash-linear-attention
+wheel
+pynvml

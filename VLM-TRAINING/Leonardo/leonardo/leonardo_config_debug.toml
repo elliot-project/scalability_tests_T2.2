@@ -1,0 +1,38 @@
+[model]
+model_name = "Qwen/Qwen3-VL-2B-Instruct"
+model_impl = "native"
+train_llm = true
+train_mlp = true
+train_vit = true
+
+[wandb]
+run_name = "vlm_test"
+project_name = "test"
+entity_name = "bsc_runs"
+
+[training]
+model_dir = "/leonardo_scratch/large/userinternal/rscheda0/ELLIOT/models/qwen3_2b"
+output_dir = "/leonardo_scratch/large/userinternal/rscheda0/ELLIOT/models/qwen3_2b/qwen_finetune/debug"
+
+tpi_multiplier = 1.0
+save_steps = 10000000
+
+scheduler_type = "cosine"
+total_steps = 18000
+warmup_steps = 100
+min_lr_ratio = 0.1
+
+lr_llm = 0.00002
+lr_mlp = 0.0001
+
+data_parallel = 'ddp'
+tp_size = 1
+
+[data]
+data_path = "/leonardo_scratch/large/userinternal/rscheda0/synth-data-bench-training/data/cap_pretrain"
+seq_len = 4096
+
+batch_size = 0
+packing_buffer_size = 200
+
+
