@@ -11,8 +11,8 @@ project_name = "test"
 entity_name = "bsc_runs"
 
 [training]
-model_dir = "/leonardo_scratch/large/userinternal/rscheda0/ELLIOT/models/qwen3_2b"
-output_dir = "/leonardo_scratch/large/userinternal/rscheda0/ELLIOT/models/qwen3_2b/qwen_finetune/debug"
+model_dir = "/leonardo_work/Ellio_Elliott/models/qwen3vl_2b"
+output_dir = "/leonardo_work/Ellio_Elliott/models/qwen3vl_2b/qwen_finetune/debug"
 
 tpi_multiplier = 1.0
 save_steps = 10000000
@@ -29,8 +29,8 @@ data_parallel = 'ddp'
 tp_size = 1
 
 [data]
-data_path = "/leonardo_scratch/large/userinternal/rscheda0/synth-data-bench-training/data/cap_pretrain"
-seq_len = 4096
+data_path = "/leonardo_work/Ellio_Elliott/data/cap_pretrain"
+seq_len = 8192
 
 batch_size = 0
 packing_buffer_size = 200
