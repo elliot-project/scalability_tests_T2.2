@@ -30,7 +30,7 @@ tp_size = 1
 
 [data]
 data_path = "/leonardo_work/Ellio_Elliott/data/cap_pretrain"
-seq_len = 8192
+seq_len = 4096
 
 batch_size = 0
 packing_buffer_size = 200

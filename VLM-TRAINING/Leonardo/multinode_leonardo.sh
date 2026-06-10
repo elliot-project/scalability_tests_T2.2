@@ -7,7 +7,7 @@
 #SBATCH --gres=gpu:4
 #SBATCH --exclusive
 #SBATCH -A Ellio_Elliott
-#SBATCH --job-name=fv-finetune
+##SBATCH --job-name=fv-finetune
 #SBATCH --partition=boost_usr_prod
 ## SBATCH --mail-type=all
 ## SBATCH --mail-user=r.scheda@cineca.it
@@ -23,12 +23,21 @@ head_node_ip=$(srun --nodes=1 --ntasks=1 -w "$head_node" hostname --ip-address)
 
 echo Node IP: $head_node_ip
 
+
+module load gcc
+module load cuda/12.6
+
+
+
+######### SETUP ENVIRONMENT #########
+PY_ENV=/leonardo_scratch/large/userinternal/rscheda0/ELLIOT/scalability_tests_T2.2/VLM-TRAINING/Leonardo/prova_venv
+CONFIG_PATH=/leonardo_scratch/large/userinternal/rscheda0/ELLIOT/scalability_tests_T2.2/VLM-TRAINING/Leonardo/vlm-training/configs/leonardo/leonardo_config_debug.toml
+#####################################
+
 # load env
 #source /leonardo_scratch/large/userinternal/rscheda0/ELLIOT/env_torch/bin/activate
-source /leonardo_scratch/large/userinternal/rscheda0/ELLIOT/scalability_tests_T2.2/VLM-TRAINING/Leonardo/.venv/bin/activate
-
-module load cuda/12.6
-module load gcc
+#source /leonardo_scratch/large/userinternal/rscheda0/ELLIOT/scalability_tests_T2.2/VLM-TRAINING/Leonardo/.venv/bin/activate
+source $PY_ENV/bin/activate
 
 sleep 5
 
@@ -66,9 +75,17 @@ export DOMAIN_BLACKLIST=github.com,huggingface.co
 
 
 
-#export NCCL_NVLS_ENABLE=0
+export NCCL_IB_HCA=mlx5_0:1,mlx5_1:1,mlx5_2:1,mlx5_3:1
+export NCCL_DEBUG=INFO
+export NCCL_NET="IB"
+export NCCL_SOCKET_IFNAME=ib0,ib1,ib2,ib3
+export NCCL_IB_CUDA_SUPPORT=1
+export NCCL_IB_GDR_LEVEL=SYS
+export NCCL_P2P_LEVEL=NVL
+export NCCL_IB_SL=1
 
-
+export NCCL_NVLS_ENABLE=0
+#export LD_LIBRARY_PATH=/usr/lib64:/usr/lib/x86_64-linux-gnu:$LD_LIBRARY_PATH
 
 wandb enabled
 wandb offline
@@ -84,4 +101,4 @@ srun --cpu-bind=none torchrun --nproc_per_node=$NGPUS \
                 --rdzv_backend c10d \
                 --rdzv_endpoint "$head_node_ip:29500" \
                 -m train.train_qwen \
-		--config /leonardo_scratch/large/userinternal/rscheda0/ELLIOT/vlm-training/configs/leonardo/leonardo_config_debug.toml \
+		--config $CONFIG_PATH \

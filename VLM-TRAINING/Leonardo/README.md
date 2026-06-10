@@ -66,6 +66,8 @@ except ImportError:
 ```
 
 
+To download models and datasets, follow the instructions [here](https://github.com/VLR-CVC/vlm-training/blob/main/USAGE.md)
+
 
 Run the experiment:
 ```
@@ -76,7 +78,5 @@ sbatch scripts/multinode_leonardo.sh
 N.B. Be sure to add these lines in the jobscript:
 ```
 export NCCL_NVLS_ENABLE=0
-export LD_LIBRARY_PATH=/usr/lib64:/usr/lib/x86_64-linux-gnu:$LD_LIBRARY_PATH
-
 ```
 
