@@ -71,6 +71,7 @@ To download models and datasets, follow the instructions [here](https://github.c
 
 Run the experiment:
 ```
+module purge
 cd vlm-training
 sbatch scripts/multinode_leonardo.sh
 ```
