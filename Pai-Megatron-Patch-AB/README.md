@@ -23,16 +23,16 @@ apptainer shell -B $BINDS qwen3vl_pai_megatron.sif
 Inside the container, build the fake webdataset and then generate the metadata:
 
 ```bash
-cd /mnt/Pai-Megatron-Patch/toolkits/multimodal_data_preprocessing
+cd /workspace/Pai-Megatron-Patch/toolkits/multimodal_data_preprocessing
 python build_fake_wds_for_vl.py --output-dir your_wds_path
 
-cd /mnt/Pai-Megatron-Patch/toolkits/multimodal_data_preprocessing
+cd /workspace/Pai-Megatron-Patch/toolkits/multimodal_data_preprocessing
 python build_wds_meta_data_from_datajuice.py --dataset-root your_wds_path
 ```
 
 ## 3. Launch training
 
-Before launching training, edit `run_qwen.sh` and change all paths at the beginning of the script to match your environment.
+Before launching training, edit `run_qwen.sh` and change all paths at the beginning of the script.
 
 Then start training with:
 
