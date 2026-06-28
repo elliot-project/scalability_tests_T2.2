@@ -1,0 +1,292 @@
+W0628 17:21:23.329000 369227 torch/distributed/run.py:774] 
+W0628 17:21:23.329000 369227 torch/distributed/run.py:774] *****************************************
+W0628 17:21:23.329000 369227 torch/distributed/run.py:774] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W0628 17:21:23.329000 369227 torch/distributed/run.py:774] *****************************************
+W0628 17:21:23.332000 2443807 torch/distributed/run.py:774] 
+W0628 17:21:23.332000 2443807 torch/distributed/run.py:774] *****************************************
+W0628 17:21:23.332000 2443807 torch/distributed/run.py:774] Setting OMP_NUM_THREADS environment variable for each process to be 1 in default, to avoid your system being overloaded, please further tune the variable for optimal performance in your application as needed. 
+W0628 17:21:23.332000 2443807 torch/distributed/run.py:774] *****************************************
+/usr/local/lib/python3.12/dist-packages/modelopt/torch/utils/import_utils.py:25: UserWarning: Failed to import apex plugin due to: AttributeError("module 'transformers.modeling_utils' has no attribute 'Conv1D'")
+  warnings.warn(f"Failed to import {plugin_name} plugin due to: {repr(e)}")
+/usr/local/lib/python3.12/dist-packages/modelopt/torch/utils/import_utils.py:25: UserWarning: Failed to import apex plugin due to: AttributeError("module 'transformers.modeling_utils' has no attribute 'Conv1D'")
+  warnings.warn(f"Failed to import {plugin_name} plugin due to: {repr(e)}")
+/usr/local/lib/python3.12/dist-packages/modelopt/torch/utils/import_utils.py:25: UserWarning: Failed to import apex plugin due to: AttributeError("module 'transformers.modeling_utils' has no attribute 'Conv1D'")
+  warnings.warn(f"Failed to import {plugin_name} plugin due to: {repr(e)}")
+/usr/local/lib/python3.12/dist-packages/modelopt/torch/utils/import_utils.py:25: UserWarning: Failed to import apex plugin due to: AttributeError("module 'transformers.modeling_utils' has no attribute 'Conv1D'")
+  warnings.warn(f"Failed to import {plugin_name} plugin due to: {repr(e)}")
+/usr/local/lib/python3.12/dist-packages/modelopt/torch/utils/import_utils.py:25: UserWarning: Failed to import huggingface plugin due to: AttributeError("module 'transformers.modeling_utils' has no attribute 'Conv1D'")
+  warnings.warn(f"Failed to import {plugin_name} plugin due to: {repr(e)}")
+/usr/local/lib/python3.12/dist-packages/modelopt/torch/utils/import_utils.py:25: UserWarning: Failed to import huggingface plugin due to: AttributeError("module 'transformers.modeling_utils' has no attribute 'Conv1D'")
+  warnings.warn(f"Failed to import {plugin_name} plugin due to: {repr(e)}")
+/usr/local/lib/python3.12/dist-packages/modelopt/torch/utils/import_utils.py:25: UserWarning: Failed to import huggingface plugin due to: AttributeError("module 'transformers.modeling_utils' has no attribute 'Conv1D'")
+  warnings.warn(f"Failed to import {plugin_name} plugin due to: {repr(e)}")
+/usr/local/lib/python3.12/dist-packages/modelopt/torch/utils/import_utils.py:25: UserWarning: Failed to import huggingface plugin due to: AttributeError("module 'transformers.modeling_utils' has no attribute 'Conv1D'")
+  warnings.warn(f"Failed to import {plugin_name} plugin due to: {repr(e)}")
+/usr/local/lib/python3.12/dist-packages/modelopt/torch/utils/import_utils.py:25: UserWarning: Failed to import megatron plugin due to: AttributeError("module 'transformers.modeling_utils' has no attribute 'Conv1D'")
+  warnings.warn(f"Failed to import {plugin_name} plugin due to: {repr(e)}")
+/usr/local/lib/python3.12/dist-packages/modelopt/torch/utils/import_utils.py:25: UserWarning: Failed to import megatron plugin due to: AttributeError("module 'transformers.modeling_utils' has no attribute 'Conv1D'")
+  warnings.warn(f"Failed to import {plugin_name} plugin due to: {repr(e)}")
+/usr/local/lib/python3.12/dist-packages/modelopt/torch/utils/import_utils.py:25: UserWarning: Failed to import megatron plugin due to: AttributeError("module 'transformers.modeling_utils' has no attribute 'Conv1D'")
+  warnings.warn(f"Failed to import {plugin_name} plugin due to: {repr(e)}")
+/usr/local/lib/python3.12/dist-packages/modelopt/torch/utils/import_utils.py:25: UserWarning: Failed to import megatron plugin due to: AttributeError("module 'transformers.modeling_utils' has no attribute 'Conv1D'")
+  warnings.warn(f"Failed to import {plugin_name} plugin due to: {repr(e)}")
+/usr/local/lib/python3.12/dist-packages/modelopt/torch/utils/import_utils.py:25: UserWarning: Failed to import apex plugin due to: AttributeError("module 'transformers.modeling_utils' has no attribute 'Conv1D'")
+  warnings.warn(f"Failed to import {plugin_name} plugin due to: {repr(e)}")
+/usr/local/lib/python3.12/dist-packages/modelopt/torch/utils/import_utils.py:25: UserWarning: Failed to import apex plugin due to: AttributeError("module 'transformers.modeling_utils' has no attribute 'Conv1D'")
+  warnings.warn(f"Failed to import {plugin_name} plugin due to: {repr(e)}")
+/usr/local/lib/python3.12/dist-packages/modelopt/torch/utils/import_utils.py:25: UserWarning: Failed to import apex plugin due to: AttributeError("module 'transformers.modeling_utils' has no attribute 'Conv1D'")
+  warnings.warn(f"Failed to import {plugin_name} plugin due to: {repr(e)}")
+/usr/local/lib/python3.12/dist-packages/modelopt/torch/utils/import_utils.py:25: UserWarning: Failed to import apex plugin due to: AttributeError("module 'transformers.modeling_utils' has no attribute 'Conv1D'")
+  warnings.warn(f"Failed to import {plugin_name} plugin due to: {repr(e)}")
+/usr/local/lib/python3.12/dist-packages/modelopt/torch/utils/import_utils.py:25: UserWarning: Failed to import huggingface plugin due to: AttributeError("module 'transformers.modeling_utils' has no attribute 'Conv1D'")
+  warnings.warn(f"Failed to import {plugin_name} plugin due to: {repr(e)}")
+/usr/local/lib/python3.12/dist-packages/modelopt/torch/utils/import_utils.py:25: UserWarning: Failed to import huggingface plugin due to: AttributeError("module 'transformers.modeling_utils' has no attribute 'Conv1D'")
+  warnings.warn(f"Failed to import {plugin_name} plugin due to: {repr(e)}")
+/usr/local/lib/python3.12/dist-packages/modelopt/torch/utils/import_utils.py:25: UserWarning: Failed to import huggingface plugin due to: AttributeError("module 'transformers.modeling_utils' has no attribute 'Conv1D'")
+  warnings.warn(f"Failed to import {plugin_name} plugin due to: {repr(e)}")
+/usr/local/lib/python3.12/dist-packages/modelopt/torch/utils/import_utils.py:25: UserWarning: Failed to import huggingface plugin due to: AttributeError("module 'transformers.modeling_utils' has no attribute 'Conv1D'")
+  warnings.warn(f"Failed to import {plugin_name} plugin due to: {repr(e)}")
+/usr/local/lib/python3.12/dist-packages/modelopt/torch/utils/import_utils.py:25: UserWarning: Failed to import megatron plugin due to: AttributeError("module 'transformers.modeling_utils' has no attribute 'Conv1D'")
+  warnings.warn(f"Failed to import {plugin_name} plugin due to: {repr(e)}")
+/usr/local/lib/python3.12/dist-packages/modelopt/torch/utils/import_utils.py:25: UserWarning: Failed to import megatron plugin due to: AttributeError("module 'transformers.modeling_utils' has no attribute 'Conv1D'")
+  warnings.warn(f"Failed to import {plugin_name} plugin due to: {repr(e)}")
+/usr/local/lib/python3.12/dist-packages/modelopt/torch/utils/import_utils.py:25: UserWarning: Failed to import megatron plugin due to: AttributeError("module 'transformers.modeling_utils' has no attribute 'Conv1D'")
+  warnings.warn(f"Failed to import {plugin_name} plugin due to: {repr(e)}")
+/usr/local/lib/python3.12/dist-packages/modelopt/torch/utils/import_utils.py:25: UserWarning: Failed to import megatron plugin due to: AttributeError("module 'transformers.modeling_utils' has no attribute 'Conv1D'")
+  warnings.warn(f"Failed to import {plugin_name} plugin due to: {repr(e)}")
+/usr/local/lib/python3.12/dist-packages/torch/distributed/distributed_c10d.py:4807: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+  warnings.warn(  # warn only once
+/usr/local/lib/python3.12/dist-packages/torch/distributed/distributed_c10d.py:4807: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+  warnings.warn(  # warn only once
+[rank2]:[W628 17:21:43.976762869 ProcessGroupNCCL.cpp:5023] [PG ID 0 PG GUID 0 Rank 2]  using GPU 2 as device used by this process is currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect. You can specify device_id in init_process_group() to force use of a particular device.
+[rank1]:[W628 17:21:43.976767657 ProcessGroupNCCL.cpp:5023] [PG ID 0 PG GUID 0 Rank 1]  using GPU 1 as device used by this process is currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect. You can specify device_id in init_process_group() to force use of a particular device.
+/usr/local/lib/python3.12/dist-packages/torch/distributed/distributed_c10d.py:4807: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+  warnings.warn(  # warn only once
+[rank3]:[W628 17:21:43.029823428 ProcessGroupNCCL.cpp:5023] [PG ID 0 PG GUID 0 Rank 3]  using GPU 3 as device used by this process is currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect. You can specify device_id in init_process_group() to force use of a particular device.
+/usr/local/lib/python3.12/dist-packages/torch/distributed/distributed_c10d.py:4807: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+  warnings.warn(  # warn only once
+[rank0]:[W628 17:21:43.252681179 ProcessGroupNCCL.cpp:5023] [PG ID 0 PG GUID 0 Rank 0]  using GPU 0 as device used by this process is currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect. You can specify device_id in init_process_group() to force use of a particular device.
+/usr/local/lib/python3.12/dist-packages/torch/distributed/distributed_c10d.py:4807: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+  warnings.warn(  # warn only once
+/usr/local/lib/python3.12/dist-packages/torch/distributed/distributed_c10d.py:4807: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+  warnings.warn(  # warn only once
+[rank1]:[W628 17:21:44.017281031 ProcessGroupNCCL.cpp:5023] [PG ID 0 PG GUID 0 Rank 1]  using GPU 1 as device used by this process is currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect. You can specify device_id in init_process_group() to force use of a particular device.
+[rank2]:[W628 17:21:44.017286714 ProcessGroupNCCL.cpp:5023] [PG ID 0 PG GUID 0 Rank 2]  using GPU 2 as device used by this process is currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect. You can specify device_id in init_process_group() to force use of a particular device.
+/usr/local/lib/python3.12/dist-packages/torch/distributed/distributed_c10d.py:4807: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+  warnings.warn(  # warn only once
+[rank3]:[W628 17:21:44.070964666 ProcessGroupNCCL.cpp:5023] [PG ID 0 PG GUID 0 Rank 3]  using GPU 3 as device used by this process is currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect. You can specify device_id in init_process_group() to force use of a particular device.
+/usr/local/lib/python3.12/dist-packages/torch/distributed/distributed_c10d.py:4807: UserWarning: No device id is provided via `init_process_group` or `barrier `. Using the current device set by the user. 
+  warnings.warn(  # warn only once
+[rank0]:[W628 17:21:44.131998965 ProcessGroupNCCL.cpp:5023] [PG ID 0 PG GUID 0 Rank 0]  using GPU 0 as device used by this process is currently unknown. This can potentially cause a hang if this rank to GPU mapping is incorrect. You can specify device_id in init_process_group() to force use of a particular device.
+/usr/local/lib/python3.12/dist-packages/transformer_engine/pytorch/cpu_offload.py:685: DeprecationWarning: Offloading weights is deprecated. Using offload_weights=True does not have any effect.
+  warnings.warn(
+/usr/local/lib/python3.12/dist-packages/transformer_engine/pytorch/cpu_offload.py:685: DeprecationWarning: Offloading weights is deprecated. Using offload_weights=True does not have any effect.
+  warnings.warn(
+/usr/local/lib/python3.12/dist-packages/transformer_engine/pytorch/cpu_offload.py:685: DeprecationWarning: Offloading weights is deprecated. Using offload_weights=True does not have any effect.
+  warnings.warn(
+/usr/local/lib/python3.12/dist-packages/transformer_engine/pytorch/cpu_offload.py:685: DeprecationWarning: Offloading weights is deprecated. Using offload_weights=True does not have any effect.
+  warnings.warn(
+/workspace/Pai-Megatron-Patch/backends/megatron/Megatron-LM-250624/megatron/core/transformer/transformer_layer.py:40: DeprecationWarning: Encoder-specific pipeline parallelism functionality is deprecated and will be removed in core_r0.14.0. This includes the parameters 'encoder_tensor_model_parallel_size' and 'encoder_pipeline_model_parallel_size', as well as all associated encoder pipeline parallel logic and infrastructure. This functionality is being replaced by the new 'orthotope' parallelism management system, which provides a more general and flexible approach to handling complex parallelism configurations including encoder-decoder models. Please refrain from building new features or dependencies on encoder pipeline parallelism as this entire capability will not be supported in future releases. For migration guidance and information on the orthotope system, please refer to the Megatron-LM documentation (coming soon).
+  if not parallel_state.is_inside_encoder():
+/workspace/Pai-Megatron-Patch/backends/megatron/Megatron-LM-250624/megatron/core/transformer/transformer_layer.py:40: DeprecationWarning: Encoder-specific pipeline parallelism functionality is deprecated and will be removed in core_r0.14.0. This includes the parameters 'encoder_tensor_model_parallel_size' and 'encoder_pipeline_model_parallel_size', as well as all associated encoder pipeline parallel logic and infrastructure. This functionality is being replaced by the new 'orthotope' parallelism management system, which provides a more general and flexible approach to handling complex parallelism configurations including encoder-decoder models. Please refrain from building new features or dependencies on encoder pipeline parallelism as this entire capability will not be supported in future releases. For migration guidance and information on the orthotope system, please refer to the Megatron-LM documentation (coming soon).
+  if not parallel_state.is_inside_encoder():
+/workspace/Pai-Megatron-Patch/backends/megatron/Megatron-LM-250624/megatron/core/transformer/transformer_layer.py:40: DeprecationWarning: Encoder-specific pipeline parallelism functionality is deprecated and will be removed in core_r0.14.0. This includes the parameters 'encoder_tensor_model_parallel_size' and 'encoder_pipeline_model_parallel_size', as well as all associated encoder pipeline parallel logic and infrastructure. This functionality is being replaced by the new 'orthotope' parallelism management system, which provides a more general and flexible approach to handling complex parallelism configurations including encoder-decoder models. Please refrain from building new features or dependencies on encoder pipeline parallelism as this entire capability will not be supported in future releases. For migration guidance and information on the orthotope system, please refer to the Megatron-LM documentation (coming soon).
+  if not parallel_state.is_inside_encoder():
+/workspace/Pai-Megatron-Patch/backends/megatron/Megatron-LM-250624/megatron/core/transformer/transformer_layer.py:40: DeprecationWarning: Encoder-specific pipeline parallelism functionality is deprecated and will be removed in core_r0.14.0. This includes the parameters 'encoder_tensor_model_parallel_size' and 'encoder_pipeline_model_parallel_size', as well as all associated encoder pipeline parallel logic and infrastructure. This functionality is being replaced by the new 'orthotope' parallelism management system, which provides a more general and flexible approach to handling complex parallelism configurations including encoder-decoder models. Please refrain from building new features or dependencies on encoder pipeline parallelism as this entire capability will not be supported in future releases. For migration guidance and information on the orthotope system, please refer to the Megatron-LM documentation (coming soon).
+  if not parallel_state.is_inside_encoder():
+/workspace/Pai-Megatron-Patch/backends/megatron/Megatron-LM-250624/megatron/core/transformer/spec_utils.py:97: DeprecationWarning: MLP requires ffn_hidden_size, but it was not provided. Using                     config.ffn_hidden_size by default.
+  return module(
+/workspace/Pai-Megatron-Patch/backends/megatron/Megatron-LM-250624/megatron/core/transformer/spec_utils.py:97: DeprecationWarning: MLP requires ffn_hidden_size, but it was not provided. Using                     config.ffn_hidden_size by default.
+  return module(
+/workspace/Pai-Megatron-Patch/backends/megatron/Megatron-LM-250624/megatron/core/transformer/spec_utils.py:97: DeprecationWarning: MLP requires ffn_hidden_size, but it was not provided. Using                     config.ffn_hidden_size by default.
+  return module(
+/workspace/Pai-Megatron-Patch/backends/megatron/Megatron-LM-250624/megatron/core/transformer/spec_utils.py:97: DeprecationWarning: MLP requires ffn_hidden_size, but it was not provided. Using                     config.ffn_hidden_size by default.
+  return module(
+/workspace/Pai-Megatron-Patch/backends/megatron/Megatron-LM-250624/megatron/core/extensions/transformer_engine.py:77: DeprecationWarning: `hidden_size` arg has been renamed to `normalized_shape` for compatibility with `torch.nn.LayerNorm`.
+  instance = te.pytorch.LayerNorm(
+/workspace/Pai-Megatron-Patch/backends/megatron/Megatron-LM-250624/megatron/core/extensions/transformer_engine.py:77: DeprecationWarning: `hidden_size` arg has been renamed to `normalized_shape` for compatibility with `torch.nn.LayerNorm`.
+  instance = te.pytorch.LayerNorm(
+/workspace/Pai-Megatron-Patch/backends/megatron/Megatron-LM-250624/megatron/core/extensions/transformer_engine.py:77: DeprecationWarning: `hidden_size` arg has been renamed to `normalized_shape` for compatibility with `torch.nn.LayerNorm`.
+  instance = te.pytorch.LayerNorm(
+/workspace/Pai-Megatron-Patch/backends/megatron/Megatron-LM-250624/megatron/core/models/vision/multimodal_projector.py:35: DeprecationWarning: MLP requires ffn_hidden_size, but it was not provided. Using                     config.ffn_hidden_size by default.
+  self.encoder = MLP(config=config, submodules=submodules, input_size=input_size)
+/workspace/Pai-Megatron-Patch/backends/megatron/Megatron-LM-250624/megatron/core/extensions/transformer_engine.py:77: DeprecationWarning: `hidden_size` arg has been renamed to `normalized_shape` for compatibility with `torch.nn.LayerNorm`.
+  instance = te.pytorch.LayerNorm(
+/workspace/Pai-Megatron-Patch/backends/megatron/Megatron-LM-250624/megatron/core/models/vision/multimodal_projector.py:35: DeprecationWarning: MLP requires ffn_hidden_size, but it was not provided. Using                     config.ffn_hidden_size by default.
+  self.encoder = MLP(config=config, submodules=submodules, input_size=input_size)
+/workspace/Pai-Megatron-Patch/backends/megatron/Megatron-LM-250624/megatron/core/transformer/mlp.py:76: DeprecationWarning: Warning: tp_group is None, using default tp group. Passing tp_group will be mandatory soon
+  tp_group = get_tensor_model_parallel_group_if_none(tp_group, is_expert=is_expert)
+/workspace/Pai-Megatron-Patch/backends/megatron/Megatron-LM-250624/megatron/core/models/vision/multimodal_projector.py:35: DeprecationWarning: MLP requires ffn_hidden_size, but it was not provided. Using                     config.ffn_hidden_size by default.
+  self.encoder = MLP(config=config, submodules=submodules, input_size=input_size)
+/workspace/Pai-Megatron-Patch/backends/megatron/Megatron-LM-250624/megatron/core/models/vision/multimodal_projector.py:35: DeprecationWarning: MLP requires ffn_hidden_size, but it was not provided. Using                     config.ffn_hidden_size by default.
+  self.encoder = MLP(config=config, submodules=submodules, input_size=input_size)
+/workspace/Pai-Megatron-Patch/backends/megatron/Megatron-LM-250624/megatron/core/tensor_parallel/layers.py:212: DeprecationWarning: Warning: tp_group is None, using default tp group. Passing tp_group will be mandatory soon
+  self.tp_group = get_tensor_model_parallel_group_if_none(self.tp_group)
+/usr/local/lib/python3.12/dist-packages/transformer_engine/pytorch/cpu_offload.py:685: DeprecationWarning: Offloading weights is deprecated. Using offload_weights=True does not have any effect.
+  warnings.warn(
+/usr/local/lib/python3.12/dist-packages/transformer_engine/pytorch/cpu_offload.py:685: DeprecationWarning: Offloading weights is deprecated. Using offload_weights=True does not have any effect.
+  warnings.warn(
+/usr/local/lib/python3.12/dist-packages/transformer_engine/pytorch/cpu_offload.py:685: DeprecationWarning: Offloading weights is deprecated. Using offload_weights=True does not have any effect.
+  warnings.warn(
+/usr/local/lib/python3.12/dist-packages/transformer_engine/pytorch/cpu_offload.py:685: DeprecationWarning: Offloading weights is deprecated. Using offload_weights=True does not have any effect.
+  warnings.warn(
+/workspace/Pai-Megatron-Patch/backends/megatron/Megatron-LM-250624/megatron/core/transformer/transformer_layer.py:40: DeprecationWarning: Encoder-specific pipeline parallelism functionality is deprecated and will be removed in core_r0.14.0. This includes the parameters 'encoder_tensor_model_parallel_size' and 'encoder_pipeline_model_parallel_size', as well as all associated encoder pipeline parallel logic and infrastructure. This functionality is being replaced by the new 'orthotope' parallelism management system, which provides a more general and flexible approach to handling complex parallelism configurations including encoder-decoder models. Please refrain from building new features or dependencies on encoder pipeline parallelism as this entire capability will not be supported in future releases. For migration guidance and information on the orthotope system, please refer to the Megatron-LM documentation (coming soon).
+  if not parallel_state.is_inside_encoder():
+/workspace/Pai-Megatron-Patch/backends/megatron/Megatron-LM-250624/megatron/core/transformer/transformer_layer.py:40: DeprecationWarning: Encoder-specific pipeline parallelism functionality is deprecated and will be removed in core_r0.14.0. This includes the parameters 'encoder_tensor_model_parallel_size' and 'encoder_pipeline_model_parallel_size', as well as all associated encoder pipeline parallel logic and infrastructure. This functionality is being replaced by the new 'orthotope' parallelism management system, which provides a more general and flexible approach to handling complex parallelism configurations including encoder-decoder models. Please refrain from building new features or dependencies on encoder pipeline parallelism as this entire capability will not be supported in future releases. For migration guidance and information on the orthotope system, please refer to the Megatron-LM documentation (coming soon).
+  if not parallel_state.is_inside_encoder():
+/workspace/Pai-Megatron-Patch/backends/megatron/Megatron-LM-250624/megatron/core/transformer/transformer_layer.py:40: DeprecationWarning: Encoder-specific pipeline parallelism functionality is deprecated and will be removed in core_r0.14.0. This includes the parameters 'encoder_tensor_model_parallel_size' and 'encoder_pipeline_model_parallel_size', as well as all associated encoder pipeline parallel logic and infrastructure. This functionality is being replaced by the new 'orthotope' parallelism management system, which provides a more general and flexible approach to handling complex parallelism configurations including encoder-decoder models. Please refrain from building new features or dependencies on encoder pipeline parallelism as this entire capability will not be supported in future releases. For migration guidance and information on the orthotope system, please refer to the Megatron-LM documentation (coming soon).
+  if not parallel_state.is_inside_encoder():
+/workspace/Pai-Megatron-Patch/backends/megatron/Megatron-LM-250624/megatron/core/transformer/transformer_layer.py:40: DeprecationWarning: Encoder-specific pipeline parallelism functionality is deprecated and will be removed in core_r0.14.0. This includes the parameters 'encoder_tensor_model_parallel_size' and 'encoder_pipeline_model_parallel_size', as well as all associated encoder pipeline parallel logic and infrastructure. This functionality is being replaced by the new 'orthotope' parallelism management system, which provides a more general and flexible approach to handling complex parallelism configurations including encoder-decoder models. Please refrain from building new features or dependencies on encoder pipeline parallelism as this entire capability will not be supported in future releases. For migration guidance and information on the orthotope system, please refer to the Megatron-LM documentation (coming soon).
+  if not parallel_state.is_inside_encoder():
+/workspace/Pai-Megatron-Patch/backends/megatron/Megatron-LM-250624/megatron/core/transformer/spec_utils.py:97: DeprecationWarning: MLP requires ffn_hidden_size, but it was not provided. Using                     config.ffn_hidden_size by default.
+  return module(
+/workspace/Pai-Megatron-Patch/backends/megatron/Megatron-LM-250624/megatron/core/transformer/spec_utils.py:97: DeprecationWarning: MLP requires ffn_hidden_size, but it was not provided. Using                     config.ffn_hidden_size by default.
+  return module(
+/workspace/Pai-Megatron-Patch/backends/megatron/Megatron-LM-250624/megatron/core/transformer/spec_utils.py:97: DeprecationWarning: MLP requires ffn_hidden_size, but it was not provided. Using                     config.ffn_hidden_size by default.
+  return module(
+/workspace/Pai-Megatron-Patch/backends/megatron/Megatron-LM-250624/megatron/core/transformer/spec_utils.py:97: DeprecationWarning: MLP requires ffn_hidden_size, but it was not provided. Using                     config.ffn_hidden_size by default.
+  return module(
+/workspace/Pai-Megatron-Patch/backends/megatron/Megatron-LM-250624/megatron/core/extensions/transformer_engine.py:77: DeprecationWarning: `hidden_size` arg has been renamed to `normalized_shape` for compatibility with `torch.nn.LayerNorm`.
+  instance = te.pytorch.LayerNorm(
+/workspace/Pai-Megatron-Patch/backends/megatron/Megatron-LM-250624/megatron/core/extensions/transformer_engine.py:77: DeprecationWarning: `hidden_size` arg has been renamed to `normalized_shape` for compatibility with `torch.nn.LayerNorm`.
+  instance = te.pytorch.LayerNorm(
+/workspace/Pai-Megatron-Patch/backends/megatron/Megatron-LM-250624/megatron/core/models/vision/multimodal_projector.py:35: DeprecationWarning: MLP requires ffn_hidden_size, but it was not provided. Using                     config.ffn_hidden_size by default.
+  self.encoder = MLP(config=config, submodules=submodules, input_size=input_size)
+/workspace/Pai-Megatron-Patch/backends/megatron/Megatron-LM-250624/megatron/core/extensions/transformer_engine.py:77: DeprecationWarning: `hidden_size` arg has been renamed to `normalized_shape` for compatibility with `torch.nn.LayerNorm`.
+  instance = te.pytorch.LayerNorm(
+/workspace/Pai-Megatron-Patch/backends/megatron/Megatron-LM-250624/megatron/core/models/vision/multimodal_projector.py:35: DeprecationWarning: MLP requires ffn_hidden_size, but it was not provided. Using                     config.ffn_hidden_size by default.
+  self.encoder = MLP(config=config, submodules=submodules, input_size=input_size)
+/workspace/Pai-Megatron-Patch/backends/megatron/Megatron-LM-250624/megatron/core/extensions/transformer_engine.py:77: DeprecationWarning: `hidden_size` arg has been renamed to `normalized_shape` for compatibility with `torch.nn.LayerNorm`.
+  instance = te.pytorch.LayerNorm(
+/workspace/Pai-Megatron-Patch/backends/megatron/Megatron-LM-250624/megatron/core/transformer/mlp.py:76: DeprecationWarning: Warning: tp_group is None, using default tp group. Passing tp_group will be mandatory soon
+  tp_group = get_tensor_model_parallel_group_if_none(tp_group, is_expert=is_expert)
+/workspace/Pai-Megatron-Patch/backends/megatron/Megatron-LM-250624/megatron/core/models/vision/multimodal_projector.py:35: DeprecationWarning: MLP requires ffn_hidden_size, but it was not provided. Using                     config.ffn_hidden_size by default.
+  self.encoder = MLP(config=config, submodules=submodules, input_size=input_size)
+/workspace/Pai-Megatron-Patch/backends/megatron/Megatron-LM-250624/megatron/core/models/vision/multimodal_projector.py:35: DeprecationWarning: MLP requires ffn_hidden_size, but it was not provided. Using                     config.ffn_hidden_size by default.
+  self.encoder = MLP(config=config, submodules=submodules, input_size=input_size)
+/workspace/Pai-Megatron-Patch/backends/megatron/Megatron-LM-250624/megatron/core/tensor_parallel/layers.py:212: DeprecationWarning: Warning: tp_group is None, using default tp group. Passing tp_group will be mandatory soon
+  self.tp_group = get_tensor_model_parallel_group_if_none(self.tp_group)
+/usr/lib/python3.12/multiprocessing/popen_fork.py:66: DeprecationWarning: This process (pid=2443840) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  self.pid = os.fork()
+/usr/lib/python3.12/multiprocessing/popen_fork.py:66: DeprecationWarning: This process (pid=369260) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  self.pid = os.fork()
+/workspace/Pai-Megatron-Patch/backends/megatron/Megatron-LM-250624/megatron/core/distributed/param_and_grad_buffer.py:279: UserWarning: The next bucket's parameter all-gather operation has already been dispatched. This may be caused by a mismatch between the order of parameter registration and forward pass execution, which will hurt the communication-computation overlap performance.
+  warnings.warn(
+/workspace/Pai-Megatron-Patch/backends/megatron/Megatron-LM-250624/megatron/core/distributed/param_and_grad_buffer.py:279: UserWarning: The next bucket's parameter all-gather operation has already been dispatched. This may be caused by a mismatch between the order of parameter registration and forward pass execution, which will hurt the communication-computation overlap performance.
+  warnings.warn(
+/workspace/Pai-Megatron-Patch/backends/megatron/Megatron-LM-250624/megatron/core/distributed/param_and_grad_buffer.py:279: UserWarning: The next bucket's parameter all-gather operation has already been dispatched. This may be caused by a mismatch between the order of parameter registration and forward pass execution, which will hurt the communication-computation overlap performance.
+  warnings.warn(
+/workspace/Pai-Megatron-Patch/backends/megatron/Megatron-LM-250624/megatron/core/distributed/param_and_grad_buffer.py:279: UserWarning: The next bucket's parameter all-gather operation has already been dispatched. This may be caused by a mismatch between the order of parameter registration and forward pass execution, which will hurt the communication-computation overlap performance.
+  warnings.warn(
+/workspace/Pai-Megatron-Patch/backends/megatron/Megatron-LM-250624/megatron/core/distributed/param_and_grad_buffer.py:279: UserWarning: The next bucket's parameter all-gather operation has already been dispatched. This may be caused by a mismatch between the order of parameter registration and forward pass execution, which will hurt the communication-computation overlap performance.
+  warnings.warn(
+/workspace/Pai-Megatron-Patch/backends/megatron/Megatron-LM-250624/megatron/core/distributed/param_and_grad_buffer.py:279: UserWarning: The next bucket's parameter all-gather operation has already been dispatched. This may be caused by a mismatch between the order of parameter registration and forward pass execution, which will hurt the communication-computation overlap performance.
+  warnings.warn(
+/workspace/Pai-Megatron-Patch/backends/megatron/Megatron-LM-250624/megatron/core/distributed/param_and_grad_buffer.py:279: UserWarning: The next bucket's parameter all-gather operation has already been dispatched. This may be caused by a mismatch between the order of parameter registration and forward pass execution, which will hurt the communication-computation overlap performance.
+  warnings.warn(
+/workspace/Pai-Megatron-Patch/backends/megatron/Megatron-LM-250624/megatron/core/distributed/param_and_grad_buffer.py:279: UserWarning: The next bucket's parameter all-gather operation has already been dispatched. This may be caused by a mismatch between the order of parameter registration and forward pass execution, which will hurt the communication-computation overlap performance.
+  warnings.warn(
+/workspace/Pai-Megatron-Patch/backends/megatron/Megatron-LM-250624/megatron/core/transformer/transformer_layer.py:40: DeprecationWarning: Encoder-specific pipeline parallelism functionality is deprecated and will be removed in core_r0.14.0. This includes the parameters 'encoder_tensor_model_parallel_size' and 'encoder_pipeline_model_parallel_size', as well as all associated encoder pipeline parallel logic and infrastructure. This functionality is being replaced by the new 'orthotope' parallelism management system, which provides a more general and flexible approach to handling complex parallelism configurations including encoder-decoder models. Please refrain from building new features or dependencies on encoder pipeline parallelism as this entire capability will not be supported in future releases. For migration guidance and information on the orthotope system, please refer to the Megatron-LM documentation (coming soon).
+  if not parallel_state.is_inside_encoder():
+/workspace/Pai-Megatron-Patch/backends/megatron/Megatron-LM-250624/megatron/core/transformer/transformer_layer.py:40: DeprecationWarning: Encoder-specific pipeline parallelism functionality is deprecated and will be removed in core_r0.14.0. This includes the parameters 'encoder_tensor_model_parallel_size' and 'encoder_pipeline_model_parallel_size', as well as all associated encoder pipeline parallel logic and infrastructure. This functionality is being replaced by the new 'orthotope' parallelism management system, which provides a more general and flexible approach to handling complex parallelism configurations including encoder-decoder models. Please refrain from building new features or dependencies on encoder pipeline parallelism as this entire capability will not be supported in future releases. For migration guidance and information on the orthotope system, please refer to the Megatron-LM documentation (coming soon).
+  if not parallel_state.is_inside_encoder():
+/workspace/Pai-Megatron-Patch/backends/megatron/Megatron-LM-250624/megatron/core/transformer/transformer_layer.py:40: DeprecationWarning: Encoder-specific pipeline parallelism functionality is deprecated and will be removed in core_r0.14.0. This includes the parameters 'encoder_tensor_model_parallel_size' and 'encoder_pipeline_model_parallel_size', as well as all associated encoder pipeline parallel logic and infrastructure. This functionality is being replaced by the new 'orthotope' parallelism management system, which provides a more general and flexible approach to handling complex parallelism configurations including encoder-decoder models. Please refrain from building new features or dependencies on encoder pipeline parallelism as this entire capability will not be supported in future releases. For migration guidance and information on the orthotope system, please refer to the Megatron-LM documentation (coming soon).
+  if not parallel_state.is_inside_encoder():
+/workspace/Pai-Megatron-Patch/backends/megatron/Megatron-LM-250624/megatron/core/transformer/transformer_layer.py:40: DeprecationWarning: Encoder-specific pipeline parallelism functionality is deprecated and will be removed in core_r0.14.0. This includes the parameters 'encoder_tensor_model_parallel_size' and 'encoder_pipeline_model_parallel_size', as well as all associated encoder pipeline parallel logic and infrastructure. This functionality is being replaced by the new 'orthotope' parallelism management system, which provides a more general and flexible approach to handling complex parallelism configurations including encoder-decoder models. Please refrain from building new features or dependencies on encoder pipeline parallelism as this entire capability will not be supported in future releases. For migration guidance and information on the orthotope system, please refer to the Megatron-LM documentation (coming soon).
+  if not parallel_state.is_inside_encoder():
+/workspace/Pai-Megatron-Patch/backends/megatron/Megatron-LM-250624/megatron/core/transformer/transformer_layer.py:40: DeprecationWarning: Encoder-specific pipeline parallelism functionality is deprecated and will be removed in core_r0.14.0. This includes the parameters 'encoder_tensor_model_parallel_size' and 'encoder_pipeline_model_parallel_size', as well as all associated encoder pipeline parallel logic and infrastructure. This functionality is being replaced by the new 'orthotope' parallelism management system, which provides a more general and flexible approach to handling complex parallelism configurations including encoder-decoder models. Please refrain from building new features or dependencies on encoder pipeline parallelism as this entire capability will not be supported in future releases. For migration guidance and information on the orthotope system, please refer to the Megatron-LM documentation (coming soon).
+  if not parallel_state.is_inside_encoder():
+/workspace/Pai-Megatron-Patch/backends/megatron/Megatron-LM-250624/megatron/core/transformer/transformer_layer.py:40: DeprecationWarning: Encoder-specific pipeline parallelism functionality is deprecated and will be removed in core_r0.14.0. This includes the parameters 'encoder_tensor_model_parallel_size' and 'encoder_pipeline_model_parallel_size', as well as all associated encoder pipeline parallel logic and infrastructure. This functionality is being replaced by the new 'orthotope' parallelism management system, which provides a more general and flexible approach to handling complex parallelism configurations including encoder-decoder models. Please refrain from building new features or dependencies on encoder pipeline parallelism as this entire capability will not be supported in future releases. For migration guidance and information on the orthotope system, please refer to the Megatron-LM documentation (coming soon).
+  if not parallel_state.is_inside_encoder():
+/workspace/Pai-Megatron-Patch/backends/megatron/Megatron-LM-250624/megatron/core/transformer/transformer_layer.py:40: DeprecationWarning: Encoder-specific pipeline parallelism functionality is deprecated and will be removed in core_r0.14.0. This includes the parameters 'encoder_tensor_model_parallel_size' and 'encoder_pipeline_model_parallel_size', as well as all associated encoder pipeline parallel logic and infrastructure. This functionality is being replaced by the new 'orthotope' parallelism management system, which provides a more general and flexible approach to handling complex parallelism configurations including encoder-decoder models. Please refrain from building new features or dependencies on encoder pipeline parallelism as this entire capability will not be supported in future releases. For migration guidance and information on the orthotope system, please refer to the Megatron-LM documentation (coming soon).
+  if not parallel_state.is_inside_encoder():
+/workspace/Pai-Megatron-Patch/backends/megatron/Megatron-LM-250624/megatron/core/transformer/transformer_layer.py:40: DeprecationWarning: Encoder-specific pipeline parallelism functionality is deprecated and will be removed in core_r0.14.0. This includes the parameters 'encoder_tensor_model_parallel_size' and 'encoder_pipeline_model_parallel_size', as well as all associated encoder pipeline parallel logic and infrastructure. This functionality is being replaced by the new 'orthotope' parallelism management system, which provides a more general and flexible approach to handling complex parallelism configurations including encoder-decoder models. Please refrain from building new features or dependencies on encoder pipeline parallelism as this entire capability will not be supported in future releases. For migration guidance and information on the orthotope system, please refer to the Megatron-LM documentation (coming soon).
+  if not parallel_state.is_inside_encoder():
+/usr/local/lib/python3.12/dist-packages/modelopt/torch/utils/import_utils.py:25: UserWarning: Failed to import apex plugin due to: AttributeError("module 'transformers.modeling_utils' has no attribute 'Conv1D'")
+  warnings.warn(f"Failed to import {plugin_name} plugin due to: {repr(e)}")
+/usr/local/lib/python3.12/dist-packages/modelopt/torch/utils/import_utils.py:25: UserWarning: Failed to import apex plugin due to: AttributeError("module 'transformers.modeling_utils' has no attribute 'Conv1D'")
+  warnings.warn(f"Failed to import {plugin_name} plugin due to: {repr(e)}")
+/usr/local/lib/python3.12/dist-packages/modelopt/torch/utils/import_utils.py:25: UserWarning: Failed to import apex plugin due to: AttributeError("module 'transformers.modeling_utils' has no attribute 'Conv1D'")
+  warnings.warn(f"Failed to import {plugin_name} plugin due to: {repr(e)}")
+/usr/local/lib/python3.12/dist-packages/modelopt/torch/utils/import_utils.py:25: UserWarning: Failed to import huggingface plugin due to: AttributeError("module 'transformers.modeling_utils' has no attribute 'Conv1D'")
+  warnings.warn(f"Failed to import {plugin_name} plugin due to: {repr(e)}")
+/usr/local/lib/python3.12/dist-packages/modelopt/torch/utils/import_utils.py:25: UserWarning: Failed to import huggingface plugin due to: AttributeError("module 'transformers.modeling_utils' has no attribute 'Conv1D'")
+  warnings.warn(f"Failed to import {plugin_name} plugin due to: {repr(e)}")
+/usr/local/lib/python3.12/dist-packages/modelopt/torch/utils/import_utils.py:25: UserWarning: Failed to import huggingface plugin due to: AttributeError("module 'transformers.modeling_utils' has no attribute 'Conv1D'")
+  warnings.warn(f"Failed to import {plugin_name} plugin due to: {repr(e)}")
+/usr/local/lib/python3.12/dist-packages/modelopt/torch/utils/import_utils.py:25: UserWarning: Failed to import megatron plugin due to: AttributeError("module 'transformers.modeling_utils' has no attribute 'Conv1D'")
+  warnings.warn(f"Failed to import {plugin_name} plugin due to: {repr(e)}")
+/usr/local/lib/python3.12/dist-packages/modelopt/torch/utils/import_utils.py:25: UserWarning: Failed to import megatron plugin due to: AttributeError("module 'transformers.modeling_utils' has no attribute 'Conv1D'")
+  warnings.warn(f"Failed to import {plugin_name} plugin due to: {repr(e)}")
+/usr/local/lib/python3.12/dist-packages/modelopt/torch/utils/import_utils.py:25: UserWarning: Failed to import megatron plugin due to: AttributeError("module 'transformers.modeling_utils' has no attribute 'Conv1D'")
+  warnings.warn(f"Failed to import {plugin_name} plugin due to: {repr(e)}")
+/usr/local/lib/python3.12/dist-packages/modelopt/torch/utils/import_utils.py:25: UserWarning: Failed to import apex plugin due to: AttributeError("module 'transformers.modeling_utils' has no attribute 'Conv1D'")
+  warnings.warn(f"Failed to import {plugin_name} plugin due to: {repr(e)}")
+/usr/local/lib/python3.12/dist-packages/modelopt/torch/utils/import_utils.py:25: UserWarning: Failed to import huggingface plugin due to: AttributeError("module 'transformers.modeling_utils' has no attribute 'Conv1D'")
+  warnings.warn(f"Failed to import {plugin_name} plugin due to: {repr(e)}")
+/usr/local/lib/python3.12/dist-packages/modelopt/torch/utils/import_utils.py:25: UserWarning: Failed to import megatron plugin due to: AttributeError("module 'transformers.modeling_utils' has no attribute 'Conv1D'")
+  warnings.warn(f"Failed to import {plugin_name} plugin due to: {repr(e)}")
+/usr/local/lib/python3.12/dist-packages/modelopt/torch/utils/import_utils.py:25: UserWarning: Failed to import apex plugin due to: AttributeError("module 'transformers.modeling_utils' has no attribute 'Conv1D'")
+  warnings.warn(f"Failed to import {plugin_name} plugin due to: {repr(e)}")
+/usr/local/lib/python3.12/dist-packages/modelopt/torch/utils/import_utils.py:25: UserWarning: Failed to import apex plugin due to: AttributeError("module 'transformers.modeling_utils' has no attribute 'Conv1D'")
+  warnings.warn(f"Failed to import {plugin_name} plugin due to: {repr(e)}")
+/usr/local/lib/python3.12/dist-packages/modelopt/torch/utils/import_utils.py:25: UserWarning: Failed to import apex plugin due to: AttributeError("module 'transformers.modeling_utils' has no attribute 'Conv1D'")
+  warnings.warn(f"Failed to import {plugin_name} plugin due to: {repr(e)}")
+/usr/local/lib/python3.12/dist-packages/modelopt/torch/utils/import_utils.py:25: UserWarning: Failed to import huggingface plugin due to: AttributeError("module 'transformers.modeling_utils' has no attribute 'Conv1D'")
+  warnings.warn(f"Failed to import {plugin_name} plugin due to: {repr(e)}")
+/usr/local/lib/python3.12/dist-packages/modelopt/torch/utils/import_utils.py:25: UserWarning: Failed to import huggingface plugin due to: AttributeError("module 'transformers.modeling_utils' has no attribute 'Conv1D'")
+  warnings.warn(f"Failed to import {plugin_name} plugin due to: {repr(e)}")
+/usr/local/lib/python3.12/dist-packages/modelopt/torch/utils/import_utils.py:25: UserWarning: Failed to import huggingface plugin due to: AttributeError("module 'transformers.modeling_utils' has no attribute 'Conv1D'")
+  warnings.warn(f"Failed to import {plugin_name} plugin due to: {repr(e)}")
+/usr/local/lib/python3.12/dist-packages/modelopt/torch/utils/import_utils.py:25: UserWarning: Failed to import megatron plugin due to: AttributeError("module 'transformers.modeling_utils' has no attribute 'Conv1D'")
+  warnings.warn(f"Failed to import {plugin_name} plugin due to: {repr(e)}")
+/usr/local/lib/python3.12/dist-packages/modelopt/torch/utils/import_utils.py:25: UserWarning: Failed to import megatron plugin due to: AttributeError("module 'transformers.modeling_utils' has no attribute 'Conv1D'")
+  warnings.warn(f"Failed to import {plugin_name} plugin due to: {repr(e)}")
+/usr/local/lib/python3.12/dist-packages/modelopt/torch/utils/import_utils.py:25: UserWarning: Failed to import megatron plugin due to: AttributeError("module 'transformers.modeling_utils' has no attribute 'Conv1D'")
+  warnings.warn(f"Failed to import {plugin_name} plugin due to: {repr(e)}")
+/usr/local/lib/python3.12/dist-packages/modelopt/torch/utils/import_utils.py:25: UserWarning: Failed to import apex plugin due to: AttributeError("module 'transformers.modeling_utils' has no attribute 'Conv1D'")
+  warnings.warn(f"Failed to import {plugin_name} plugin due to: {repr(e)}")
+/usr/local/lib/python3.12/dist-packages/modelopt/torch/utils/import_utils.py:25: UserWarning: Failed to import huggingface plugin due to: AttributeError("module 'transformers.modeling_utils' has no attribute 'Conv1D'")
+  warnings.warn(f"Failed to import {plugin_name} plugin due to: {repr(e)}")
+/usr/local/lib/python3.12/dist-packages/modelopt/torch/utils/import_utils.py:25: UserWarning: Failed to import megatron plugin due to: AttributeError("module 'transformers.modeling_utils' has no attribute 'Conv1D'")
+  warnings.warn(f"Failed to import {plugin_name} plugin due to: {repr(e)}")
+/usr/lib/python3.12/multiprocessing/popen_fork.py:66: DeprecationWarning: This process (pid=2443842) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  self.pid = os.fork()
+/usr/lib/python3.12/multiprocessing/popen_fork.py:66: DeprecationWarning: This process (pid=2445413) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  self.pid = os.fork()
+/usr/lib/python3.12/multiprocessing/popen_fork.py:66: DeprecationWarning: This process (pid=2443841) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  self.pid = os.fork()
+/usr/lib/python3.12/multiprocessing/popen_fork.py:66: DeprecationWarning: This process (pid=2443843) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  self.pid = os.fork()
+/usr/lib/python3.12/multiprocessing/popen_fork.py:66: DeprecationWarning: This process (pid=2443840) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  self.pid = os.fork()
+/usr/lib/python3.12/multiprocessing/popen_fork.py:66: DeprecationWarning: This process (pid=2445421) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  self.pid = os.fork()
+/usr/lib/python3.12/multiprocessing/popen_fork.py:66: DeprecationWarning: This process (pid=2445420) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  self.pid = os.fork()
+/usr/lib/python3.12/multiprocessing/popen_fork.py:66: DeprecationWarning: This process (pid=2445426) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  self.pid = os.fork()
+/usr/lib/python3.12/multiprocessing/popen_fork.py:66: DeprecationWarning: This process (pid=369262) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  self.pid = os.fork()
+/usr/lib/python3.12/multiprocessing/popen_fork.py:66: DeprecationWarning: This process (pid=369261) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  self.pid = os.fork()
+/usr/lib/python3.12/multiprocessing/popen_fork.py:66: DeprecationWarning: This process (pid=369263) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  self.pid = os.fork()
+/usr/lib/python3.12/multiprocessing/popen_fork.py:66: DeprecationWarning: This process (pid=369260) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  self.pid = os.fork()
+/usr/lib/python3.12/multiprocessing/popen_fork.py:66: DeprecationWarning: This process (pid=370864) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  self.pid = os.fork()
+/usr/lib/python3.12/multiprocessing/popen_fork.py:66: DeprecationWarning: This process (pid=370865) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  self.pid = os.fork()
+/usr/lib/python3.12/multiprocessing/popen_fork.py:66: DeprecationWarning: This process (pid=370866) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  self.pid = os.fork()
+/usr/lib/python3.12/multiprocessing/popen_fork.py:66: DeprecationWarning: This process (pid=370873) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  self.pid = os.fork()
+[rank2]:[W628 17:22:59.981154325 ProcessGroupNCCL.cpp:1538] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+[rank3]:[W628 17:22:59.984957994 ProcessGroupNCCL.cpp:1538] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+[rank1]:[W628 17:22:59.027030665 ProcessGroupNCCL.cpp:1538] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+[rank2]:[W628 17:22:59.734338912 ProcessGroupNCCL.cpp:1538] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+[rank1]:[W628 17:22:59.837237527 ProcessGroupNCCL.cpp:1538] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+[rank3]:[W628 17:22:59.910724804 ProcessGroupNCCL.cpp:1538] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+[rank0]:[W628 17:24:18.852075056 ProcessGroupNCCL.cpp:1538] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())
+[rank0]:[W628 17:24:19.690250706 ProcessGroupNCCL.cpp:1538] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())

@@ -1,0 +1,140 @@
+Bootstrap: docker
+From: nvcr.io/nvidia/pytorch:24.12-py3
+
+%labels
+    Author          Emilia Cozzolino
+    Description     Pai-Megatron-Patch Qwen3-VL training environment
+    Base            nvcr.io/nvidia/pytorch:24.12-py3
+    PaiMegatronRef  https://github.com/alibaba/Pai-Megatron-Patch/tree/main/examples/qwen3_vl
+
+%environment
+    export NVTE_FRAMEWORK=pytorch
+    export CUDNN_PATH=/usr/local/lib/python3.12/dist-packages/nvidia/cudnn/
+    # Add Pai-Megatron-Patch to PYTHONPATH so it can be imported without a
+    # separate `pip install` step.
+    export PYTHONPATH=/workspace/Pai-Megatron-Patch:${PYTHONPATH:-}
+
+%post
+    set -euxo pipefail
+
+    # ------------------------------------------------------------------ #
+    # The base image hardcodes the Aliyun mirror at a level that cannot be
+    # overridden by pip.conf or environment variables.
+    # Passing -i https://pypi.org/simple/ explicitly on every pip install
+    # call is the only reliable way to override it.
+    # ------------------------------------------------------------------ #
+
+    PYPI="-i https://pypi.org/simple/"
+
+    # ------------------------------------------------------------------ #
+    # 1. Install transformers at the exact commit required for Qwen3-Omni
+    #    Clone manually then install from local path to avoid pip spawning
+    #    a subprocess for VCS build deps that ignores the -i flag.
+    # ------------------------------------------------------------------ #
+    git clone https://github.com/huggingface/transformers.git /tmp/transformers
+    cd /tmp/transformers
+    git checkout 4d0b6758b90aa54e4077171e6d42c55e0c01c622
+    pip install --no-cache-dir $PYPI .
+    cd /
+    rm -rf /tmp/transformers
+
+    # ------------------------------------------------------------------ #
+    # 2. Install torchaudio / torchvision (pins PyTorch to 2.8.0)
+    # ------------------------------------------------------------------ #
+    pip install --no-cache-dir $PYPI torchaudio==2.8.0 torchvision==0.23.0
+
+    # ------------------------------------------------------------------ #
+    # 3. Re-install flash_attn pre-built for torch 2.8 + CUDA 12.x / cp312
+    # ------------------------------------------------------------------ #
+    pip uninstall -y flash_attn || true
+    pip install --no-cache-dir $PYPI \
+        https://pai-vision-data-hz.oss-cn-zhangjiakou.aliyuncs.com/csrc/flash-attention/torch2.8.0-cu12x/flash_attn-2.7.4.post1-cp312-cp312-linux_x86_64.whl
+
+    # ------------------------------------------------------------------ #
+    # 4. Re-install apex pre-built for torch 2.8 + CUDA 12.x / cp312
+    # ------------------------------------------------------------------ #
+    pip uninstall -y apex || true
+    pip install --no-cache-dir $PYPI \
+        https://pai-vision-data-hz.oss-cn-zhangjiakou.aliyuncs.com/csrc/apex/torch2.8.0-cuda12x/apex-0.1-cp312-cp312-linux_x86_64.whl
+
+    # ------------------------------------------------------------------ #
+    # 5. Build & install Transformer Engine 2.7 from source
+    # ------------------------------------------------------------------ #
+    pip uninstall -y transformer-engine transformer-engine-cu12 transformer-engine-torch || true
+
+    apt-get update -y && apt-get install -y git git-lfs && rm -rf /var/lib/apt/lists/*
+
+    cd /tmp
+    git clone --recursive https://github.com/NVIDIA/TransformerEngine.git
+    cd TransformerEngine
+    git submodule update --init --recursive
+    git checkout release_v2.7
+
+    export CUDNN_PATH=/usr/local/lib/python3.12/dist-packages/nvidia/cudnn/
+    rm -rf /usr/local/lib/python3.12/dist-packages/nvidia/cudnn/include/__pycache__ || true
+    cp /usr/local/lib/python3.12/dist-packages/nvidia/cudnn/include/* \
+       /usr/local/cuda/include/ || true
+
+    python setup.py bdist_wheel -vvv
+
+    export NVTE_FRAMEWORK=pytorch
+    pip install --no-cache-dir $PYPI onnxscript==0.3.1
+
+    # Show what was actually built so we can debug filename mismatches
+    ls -la /tmp/TransformerEngine/dist/
+
+    TE_WHL=$(ls /tmp/TransformerEngine/dist/transformer_engine-*.whl | head -1)
+    echo "Installing TE wheel: ${TE_WHL}"
+    pip install --no-cache-dir $PYPI "${TE_WHL}"
+
+    cd /
+    rm -rf /tmp/TransformerEngine
+
+    # ------------------------------------------------------------------ #
+    # 6. Install Pai-Megatron-Patch Python dependencies
+    # ------------------------------------------------------------------ #
+    pip install --no-cache-dir $PYPI \
+        megatron-energon==7.3.2 \
+        webdataset==0.2.110 \
+        datasets==3.6.0 \
+        packaging==24.2 \
+        modelscope==1.30.0
+
+    # ------------------------------------------------------------------ #
+    # 7. Upgrade multi-storage-client
+    # ------------------------------------------------------------------ #
+    pip install --no-cache-dir $PYPI -U multi-storage-client
+
+    # ------------------------------------------------------------------ #
+    # 8. Clone Pai-Megatron-Patch (main branch, with submodules)
+    #    Cloned into /workspace so it is available at runtime without
+    #    requiring a writable /mnt (which is typically a bind mount).
+    # ------------------------------------------------------------------ #
+    mkdir -p /workspace
+    git clone --recurse-submodules \
+        https://github.com/alibaba/Pai-Megatron-Patch.git \
+        /workspace/Pai-Megatron-Patch
+
+    # Verify the qwen3_vl example directory is present
+    ls /workspace/Pai-Megatron-Patch/examples/qwen3_vl
+
+    # ------------------------------------------------------------------ #
+    # Clean up pip cache to keep image size down
+    # ------------------------------------------------------------------ #
+    pip cache purge || true
+    rm -rf ~/.cache/pip
+
+%runscript
+    # Default: drop into bash inside the container.
+    # Override by passing a command, e.g.:
+    #   singularity run qwen3vl.sif bash /workspace/Pai-Megatron-Patch/examples/qwen3_vl/run_mcore_qwen3_vl.sh ...
+    exec "$@"
+
+%test
+    # Smoke-test: confirm key packages are importable
+    python -c "import torch; print('torch', torch.__version__)"
+    python -c "import flash_attn; print('flash_attn', flash_attn.__version__)"
+    python -c "import transformer_engine; print('transformer_engine OK')"
+    python -c "import sys; sys.path.insert(0,'/workspace/Pai-Megatron-Patch'); import megatron; print('megatron OK')"
+    echo "All smoke tests passed."
+
