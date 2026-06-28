@@ -42,12 +42,10 @@ bash run_qwen.sh
 
 The log output should be similar to the one reported in the official GitHub repository [web:6][web:11].
 
-## Official repository
+## Notes
 
 For any further information, please refer to the official repository:
 
 [https://github.com/alibaba/Pai-Megatron-Patch.git](https://github.com/alibaba/Pai-Megatron-Patch.git)
-
-## Caveat
 
 The code is currently not working with other datasets.
