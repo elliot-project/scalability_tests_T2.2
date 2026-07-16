@@ -2,4 +2,8 @@ VLM-TRAINING/Leonardo/vlm-training
 VLM-TRAINING/Leonardo/.venv
 VLM-TRAINING/Leonardo/wandb/
 VLM-TRAINING/Leonardo/prova_venv/
-
+**/**.err
+**/**.out
+**/**checkpoints
+**/**.sif
+**/**tensorboard

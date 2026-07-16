@@ -1,0 +1,34 @@
+fault_tolerance:
+  # Heartbeat configuration - detect failures faster
+  initial_rank_heartbeat_timeout: 20
+  rank_heartbeat_timeout: 15
+  
+  # Restart policy
+  restart_policy: any-failed
+  max_restarts: 5
+  
+  # Checkpoint configuration for recovery
+  checkpoint:
+    enabled: true
+    save_interval: 1000000  # Save every 10 iterations to reduce memory pressure
+    async_save: true
+    save_optimizer_states: true  # Needed for full recovery
+    save_data_sampler_state: true  # Disable to save memory
+    
+  # Rendezvous configuration for node recovery
+  rendezvous:
+    backend: c10d
+    timeout: 600
+    join_timeout: 600
+    close_timeout: 300
+    read_timeout: 300
+    
+  # NIC health monitoring
+  nic_health_monitor:
+    enabled: true
+    check_interval: 10
+    
+  # Rank health monitoring
+  rank_health_monitor:
+    enabled: true
+    check_interval: 5
