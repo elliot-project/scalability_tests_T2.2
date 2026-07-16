@@ -37,10 +37,10 @@ Before launching training, edit `run_qwen.sh` and change all paths at the beginn
 Then start training with:
 
 ```bash
-bash run_qwen.sh
+sbatch run_qwen.sh
 ```
 
-The log output should be similar to the one reported in the official GitHub repository [web:6][web:11].
+The log output should be similar to the one reported in this GitHub repository.
 
 ## Notes
 
