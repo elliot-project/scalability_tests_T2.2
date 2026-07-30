@@ -1,0 +1,17 @@
+Bootstrap: docker
+From: nvcr.io/nvidia/nemo:25.11
+
+%post
+    # NeMo container already ships megatron-bridge, but this
+    # refreshes it to latest main in case you need newer code.
+    cd /opt
+    if [ -d Megatron-Bridge ]; then rm -rf Megatron-Bridge; fi
+    git clone --recursive https://github.com/NVIDIA-NeMo/Megatron-Bridge.git
+    cd Megatron-Bridge
+    uv pip install -e . || pip install -e .
+
+%environment
+    export PYTHONPATH=/opt/Megatron-Bridge/src:$PYTHONPATH
+
+%runscript
+    exec bash "$@"
