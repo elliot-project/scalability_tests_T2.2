@@ -8,7 +8,7 @@
 #SBATCH --qos=boost_qos_dbg
 ##SBATCH --qos=boost_qos_bprod
 ##SBATCH --time=00:29:00
-#SBATCH --nodes=2
+#SBATCH --nodes=4
 #SBATCH --exclusive
 #SBATCH --cpus-per-task=32
 #SBATCH --gres=gpu:4
@@ -63,13 +63,13 @@ export WANDB_MODE=offline
 
 MASTER_PORT=9251
 
-CONTAINER=/leonardo_scratch/large/userinternal/rscheda0/ELLIOT/megatron/nemo_2502.sif
+#CONTAINER=/leonardo_scratch/large/userinternal/rscheda0/ELLIOT/megatron/nemo_2502.sif
 #OVERLAY_PATH=/leonardo_scratch/large/userinternal/rscheda0/prova_flagscale/myover2.img
-
+CONTAINER=/leonardo_scratch/large/userinternal/dbrandon/T41_oeLLM/distributed-training-benchmarking-main/nemo/leonardo/nemo_2507.sif
 
 
 # Output directories
-OUTPUT_BASE=/leonardo_scratch/large/userinternal/rscheda0/train_megatron_qwen2_5_vl_7b
+OUTPUT_BASE=/leonardo_scratch/large/userinternal/dbrandon
 TENSORBOARD_DIR=${OUTPUT_BASE}/tensorboard
 CHECKPOINT_DIR=${OUTPUT_BASE}/checkpoints
 LOGS_DIR=${OUTPUT_BASE}/logs
@@ -82,7 +82,7 @@ mkdir -p ${TENSORBOARD_DIR} ${CHECKPOINT_DIR} ${LOGS_DIR}
 # The LLaVA-Pretrain host dir is bound to /data/LLaVA-Pretrain inside the container.
 
 #DATA_PATH=/data/LLaVA-Pretrain/output/wds-2
-DATA_PATH=/data/synth-data-bench-training/data/vqa
+DATA_PATH=/data/vqa
 # Tokenizer and model paths
 TOKENIZER_PATH=/leonardo_scratch/large/userinternal/rscheda0/FlagScale/Qwen/Qwen2.5-VL-7B-Instruct
 
@@ -92,13 +92,13 @@ PP=1
 CP=1
 
 # Sequence lengths
-SEQ_LEN=256          # vision token sequence length (per image with internvit + pixel-shuffle)
+SEQ_LEN=8192          # vision token sequence length (per image with internvit + pixel-shuffle)
 DECODER_SEQ_LEN=4096 # language model context length (must be > max_num_tiles+1 * tokens_per_tile = 13*256=3328)
 MAX_POS_EMBED=128000
 
 # Batch sizes
-MBZ=1
-GBZ=16
+MBZ=2
+GBZ=4096
 NW=2
 
 # === Distributed args ===
@@ -137,11 +137,11 @@ export GPT_ARGS="\
     --seq-length ${SEQ_LEN} \
     --decoder-seq-length ${DECODER_SEQ_LEN} \
     --max-position-embeddings ${MAX_POS_EMBED} \
-    --img-h 32 \
-    --img-w 32 \
-    --patch-dim 32 \
+    --img-h 336 \
+    --img-w 336 \
+    --patch-dim 14 \
     --use-tiling \
-    --max-num-tiles 12 \
+    --max-num-tiles 4 \
     --use-thumbnail \
     --micro-batch-size ${MBZ} \
     --global-batch-size ${GBZ} \
@@ -198,7 +198,7 @@ export LOGGING_ARGS="\
     --wandb-exp-name train_megatron_qwen2_5_vl_7b"
 
 # === Bind mounts ===
-BINDS="$CUDA_HOME,${OUTPUT_BASE}:${OUTPUT_BASE},/leonardo_scratch/large/userinternal/rscheda0/:/data/,${TOKENIZER_PATH}:${TOKENIZER_PATH}"
+BINDS="$CUDA_HOME,${OUTPUT_BASE}:${OUTPUT_BASE}, /leonardo_scratch/large/userinternal/rscheda0/synth-data-bench-training/data:/data/,${TOKENIZER_PATH}:${TOKENIZER_PATH}"
 
 # === Launch ===
 srun -l singularity exec --nv \
