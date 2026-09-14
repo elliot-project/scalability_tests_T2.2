@@ -1,1 +1,3 @@
 vqa
+*.out
+*.err
