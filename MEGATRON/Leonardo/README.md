@@ -50,3 +50,6 @@ launch qwenvl training:
  ```
  sbatch train_qwen2_5-vl_llava.sh
  ```
+## Scaling
+Below you can find the performance of Qwen 2.5 vl training on synthetic data
+![alt text](./scaling_weak_multimodal.png)
