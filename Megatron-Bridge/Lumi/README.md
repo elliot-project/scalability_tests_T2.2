@@ -51,6 +51,15 @@ module use /appl/local/laifs/modules
 module load lumi-aif-singularity-bindings
 ```
 
+`$SIF_plus` resolves to the container image used for these runs:
+`/appl/local/laifs/containers/lumi-multitorch-u24r70f21m50t210-20260807_115122/lumi-multitorch-plus-u24r70f21m50t210-20260807_115122.sif`
+
+`/appl/local/laifs/containers` is the LUMI AI Factory Software (LAIFS) container
+collection: a family of images built hierarchically, each adding functionality on top
+of the previous. For the naming scheme, see the
+[LAIFS container recipes releases](https://github.com/lumi-ai-factory/laifs-container-recipes/releases)
+and the [LUMI AI software environment docs](https://docs.lumi-supercomputer.eu/laif/software/ai-environment/).
+
 Then open a shell inside the container and create the venv. The
 `--system-site-packages` flag is important: it lets the venv see the container's
 torch, transformer-engine, and so on, so you only install what is missing.
