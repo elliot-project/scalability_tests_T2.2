@@ -52,8 +52,8 @@ launch qwenvl training:
  ```
 ## Scaling
 Below you can find the strong scaling of Qwen 2.5 vl training 
-![alt text](./scaling_weak_multimodal.png)
+![alt text](./scaling_strong_multimodal.png)
 and Llava model on synthetic data
-![alt text](./scaling_weak_multimodal_llava.png)
+![alt text](./scaling_strong_multimodal_llava.png)
 
 All the configs are taken from Flagscale repository. For further details have a look at https://github.com/flagos-ai/FlagScale/tree/main/examples 
