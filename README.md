@@ -14,8 +14,9 @@ This repository is organized as a workspace for comparing and reproducing VLM tr
 - **Megatron / NeMo**-based runs
 - **Pai-Megatron-Patch** experiments for Qwen3-VL
 - **VLM-Training** experiments
+- **TorchTitan**-based runs
 
-The material currently focuses on **Leonardo**, **Lumi** and **MN5** cluster runs.
+The material currently focuses on **Leonardo**, **Lumi**, **MN5** and **JUPITER** cluster runs.
 
 ## Repository structure
 
@@ -24,6 +25,7 @@ scalability_tests_T2.2/
 ├── FLAGSCALE/
 ├── MEGATRON/
 ├── Pai-Megatron-Patch-AB/
+├── Torchtitan/
 ├── VLM-TRAINING/
 └── README.md
 ```
@@ -77,6 +79,25 @@ Current content includes:
 
 Use this directory when working specifically with the Alibaba Pai-Megatron-Patch workflow.
 
+### `Torchtitan/`
+Assets for benchmarking **[TorchTitan](https://github.com/pytorch/torchtitan)**,
+pinned at commit `b21f7d43e`.
+
+Current content includes:
+
+- `JUPITER/README.md` with the pinned revision, environment layout, the launch
+  pitfall that makes the `torchrun` console script unusable, the mandatory
+  `--training.disable-cuda-graphs`, and how to read the resulting numbers
+- `JUPITER/config_registry.py` with the benchmark-only config functions, reached
+  through `--module ttbench` and kept outside the pinned checkout
+- `JUPITER/tt_bench.sbatch` and `JUPITER/submit_tt_sweep.sh` as the SLURM launchers
+- `JUPITER/patches/attn_gym_gdn_fake_strides.py`, required on sm90
+- `JUPITER/chat_template_sft.jinja`
+
+JUPITER is the one cluster where two codebases were benchmarked against each
+other, so this directory is the counterpart of `VLM-TRAINING/JUPITER/` — same
+machine, same model, same dataset.
+
 ### `VLM-TRAINING/`
 Material for experiments based on the **VLR-CVC `vlm-training`** project.
 
@@ -92,6 +113,17 @@ Current content includes:
 - `Leonardo/multinode_leonardo.sh` with the SLURM multi-node launch script
 - `Leonardo/energon_dataloader.py` for data loading support
 - `Leonardo/requirements.txt` for Python dependencies
+- `JUPITER/README.md` with the JUPITER branch and revision, environment setup,
+  and the cluster-specific constraints (no outbound network on compute nodes,
+  `--gpus-per-task` rejected, node-local compile caches)
+- `JUPITER/multinode_jup.sh` with the SLURM multi-node launch script
+- `JUPITER/jupiter/` with the Qwen3-VL-2B and Qwen3.5-9B scaling configs
+- `JUPITER/requirements.txt` for Python dependencies
+- `LUMI/` with throughput plots per model
+
+Note that `Leonardo/` and `JUPITER/` document **different revisions** of
+`vlm-training` and their configs are not interchangeable; each README states the
+branch it targets.
 
 
 
@@ -102,3 +134,5 @@ Current content includes:
 - `FLAGSCALE/Leonardo/README.md`
 - `MEGATRON/Leonardo/README.md`
 - `VLM-TRAINING/Leonardo/README.md`
+- `VLM-TRAINING/JUPITER/README.md`
+- `Torchtitan/JUPITER/README.md`
