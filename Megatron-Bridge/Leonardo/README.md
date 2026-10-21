@@ -15,6 +15,9 @@ This script is **not standalone** — it depends on the Megatron-Bridge codebase
 1. Clone Megatron-Bridge:
 ```bash
    git clone https://github.com/NVIDIA-NeMo/Megatron-Bridge.git
+   git checkout aa8de7f70e6151af68195ba945e9594accc0167a
+   git submodule update --init --recursive
+ 
    cd Megatron-Bridge
 ```
 
